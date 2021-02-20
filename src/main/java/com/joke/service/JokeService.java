@@ -71,9 +71,7 @@ public class JokeService implements JokeServiceInterface {
 
     @Override
     public void deleteJoke(Long id) {
-        Optional<JokeModel> joke = jokeRepository.findById(id);
-
-        joke.ifPresent(jokeRepository::delete);
+        jokeRepository.deleteById(id);
     }
 
     @Override
