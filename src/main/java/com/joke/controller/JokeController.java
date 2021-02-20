@@ -76,10 +76,4 @@ public class JokeController {
     public RandomJokeJsonResponse getRandomJoke() {
         return jokeService.getRandomJoke();
     }
-
-    @GetMapping
-    @ResponseStatus(HttpStatus.OK)
-    public List<JokeModel> getAllJokes() {
-        return jokeService.getAllJokes();
-    }
 }

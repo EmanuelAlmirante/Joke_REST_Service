@@ -64,7 +64,7 @@ public class JokeService implements JokeServiceInterface {
 
             jokeRepository.save(jokeModel.get());
         } else {
-            throw new BusinessException("The joke with it " + id + " does not exist");
+            throw new BusinessException("The joke with id " + id + " does not exist");
         }
 
     }
@@ -90,7 +90,7 @@ public class JokeService implements JokeServiceInterface {
 
             jokeAllDetailsJsonResponse = new JokeAllDetailsJsonResponse(jokeId, joke, createdDate, updatedDate);
         } else {
-            throw new BusinessException("The joke with it " + id + " does not exist");
+            throw new BusinessException("The joke with id " + id + " does not exist");
         }
 
         return jokeAllDetailsJsonResponse;
