@@ -4,6 +4,8 @@ For this solution it was used a H2 in-memory DB to simplify things. This is a SQ
 
 The requirement regarding the text search query is not perfect. It will work with multiple words in the query, but they must be i the same order that they appear in the joke. For example, if we have a joke with the text "This is a test joke" and we try to do a text search query of "joke test" the result will be empty. On the other hand, if we do a text search query of "test joke" it will retrieve the correct result. To perfect this we should use Elasticsearch, for example.
 
+Due to time constrictions, the tests are not very exhaustive. For example, there are no tests for the controller. Even so, I believe that the implemented tests are able to demonstrate, in a general way, that the application fulfills the request requirements.
+
 ### Tech Stack:
 
 - Java 11
@@ -12,7 +14,6 @@ The requirement regarding the text search query is not perfect. It will work wit
 - Swagger
 - H2 Database (in-memory)
 - JUnit
-- Hamcrest
 - Mockito
 
 
