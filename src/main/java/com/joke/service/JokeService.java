@@ -77,7 +77,7 @@ public class JokeService implements JokeServiceInterface {
     @Override
     public JokeAllDetailsJsonResponse getAllDetailsJoke(Long id) {
         Optional<JokeModel> optionalJokeModel = jokeRepository.findById(id);
-        JokeAllDetailsJsonResponse jokeAllDetailsJsonResponse = null;
+        JokeAllDetailsJsonResponse jokeAllDetailsJsonResponse;
 
         if (optionalJokeModel.isPresent()) {
             JokeModel jokeModel = optionalJokeModel.get();
